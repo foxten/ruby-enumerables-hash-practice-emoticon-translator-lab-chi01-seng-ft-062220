@@ -13,7 +13,6 @@ dictionary
 end
 
 def get_japanese_emoticon(file,emoticon)
-  # code goes here
   dictionary = load_library(file)
   dictionary.each do |key, second_level|
     second_level.find do 
@@ -26,7 +25,6 @@ def get_japanese_emoticon(file,emoticon)
 end
 
 def get_english_meaning(file, emoticon)
-  # code goes here
   dictionary = load_library(file)
     dictionary.each do |key, second_level|
       second_level.find do 
