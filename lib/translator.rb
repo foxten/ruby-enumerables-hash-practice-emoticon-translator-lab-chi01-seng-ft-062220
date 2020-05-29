@@ -25,8 +25,6 @@ def get_english_meaning(file, emoticon)
       second_level.find do 
         if emoticon == dictionary[key][:japanese]
           return key
-          else emoticon != dictionary[key][:japanese]
-            "Sorry, that emoticon was not found"
         end
       end
     end
