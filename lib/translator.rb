@@ -21,7 +21,7 @@ def get_english_meaning(file, emoticon)
   # code goes here
   found = []
   dictionary = load_library(file)
-    dictionary.find do |key, second_level|
+    dictionary.each do |key, second_level|
       second_level.find do 
         if emoticon == dictionary[key][:japanese]
           return key
