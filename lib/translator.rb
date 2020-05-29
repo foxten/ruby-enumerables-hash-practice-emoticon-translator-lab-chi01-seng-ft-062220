@@ -15,7 +15,13 @@ end
 def get_japanese_emoticon(file,emoticon)
   # code goes here
   dictionary = load_library(file)
-  
+  dictionary.each do |key, second_level|
+    second_level.find do 
+      if emoticon == dictionary[key][:english]
+        return dictionary[key][:japanese]
+      end
+    end
+  end
 end
 
 def get_english_meaning(file, emoticon)
