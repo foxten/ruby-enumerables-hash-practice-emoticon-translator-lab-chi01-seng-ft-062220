@@ -27,4 +27,5 @@ def get_english_meaning(file, emoticon)
           return key
       end
     end
+  end
 end
