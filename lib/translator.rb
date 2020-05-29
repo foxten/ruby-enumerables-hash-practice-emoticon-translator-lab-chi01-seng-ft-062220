@@ -22,11 +22,9 @@ def get_english_meaning(file, emoticon)
   found = []
   dictionary = load_library(file)
     dictionary.each do |key, second_level|
-      second_level.find do 
-        if emoticon == dictionary[key][:japanese]
+      if second_level.find do 
+        emoticon == dictionary[key][:japanese]
           return key
-        else
-            "Sorry, that emoticon was not found"
         end
       end
     end
